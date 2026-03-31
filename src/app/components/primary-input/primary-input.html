@@ -1,11 +1,14 @@
 <div class="input-wrapper">
-  <label [for]="formName">{{label}}</label>
-  <div class="input-content">
-    <input [type]="type" [formControlName]="formName" [placeholder]="placeholder" />
-  </div>
-  <div class="icon">
-    <ng-content></ng-content>
-
-  </div>
-
+    <label [for]="">{{ label }}</label>
+    <div class="input-content">
+        <input
+            [type]="type"
+            [placeholder]="placeholder"
+            [value]=""
+            (input)="($event)"
+        />
+        <div class="icon">
+            <ng-content></ng-content>
+        </div>
+    </div>
 </div>
