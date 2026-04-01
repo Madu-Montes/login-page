@@ -1,4 +1,7 @@
-<app-default-login-layout title="Login into your account" primaryBtnText="Login Now" secondaryBtnText="Signup Now">
+<app-default-login-layout title="Login into your account" primaryBtnText="Login Now" secondaryBtnText="Signup Now"
+(submit)="submit()"
+(navigate)="navigate()">
+
   <form [formGroup]="loginForm">
     <app-primary-input formName="email" type="email" label="Email" placeholder="maria@gmail.com">
       <img src="/svg/email-icon.svg" alt="email icon">
@@ -7,5 +10,6 @@
     <app-primary-input formName="password" type="password" label="Your password" placeholder="*********">
       <img src="/svg/password-icon.svg" alt="password icon">
     </app-primary-input>
+    <span>Forgot passwaord?</span>
   </form>
 </app-default-login-layout>
